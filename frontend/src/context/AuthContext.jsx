@@ -49,7 +49,10 @@ export const AuthProvider = ({ children }) => {
       toast.success("Account created successfully!");
       return true;
     } catch (error) {
-      const message = error?.response?.data?.message || "Unable to sign up";
+      const message =
+        error?.response?.data?.errors?.[0]?.msg ||
+        error?.response?.data?.message ||
+        "Unable to sign up";
       toast.error(message);
       return false;
     } finally {
