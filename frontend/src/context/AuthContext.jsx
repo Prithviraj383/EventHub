@@ -1,7 +1,7 @@
 import { createContext, useEffect, useMemo, useState } from "react";
 import toast from "react-hot-toast";
 import authService from "../services/authService";
-import { clearAuth, getToken, getUser, setToken, setUser } from "../utils/tokenManager";
+import { clearAuth, setToken, setUser } from "../utils/tokenManager";
 
 export const AuthContext = createContext(null);
 
@@ -12,8 +12,7 @@ export const AuthProvider = ({ children }) => {
   const [isLoading, setIsLoading] = useState(false);
 
   useEffect(() => {
-    setUserState(getUser());
-    setTokenState(getToken());
+    clearAuth();
     setIsReady(true);
   }, []);
 
