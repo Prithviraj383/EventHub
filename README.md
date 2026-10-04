@@ -52,3 +52,5 @@ npm run dev
 
 - Update CORS settings if the frontend and backend run on different hosts.
 - See `backend/src/models/schema.sql` for database tables.
+
+Live Website Link: https://event-hub-7k5t.vercel.app/
