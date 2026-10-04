@@ -2,7 +2,7 @@ import axios from "axios";
 import { clearAuth, getToken } from "../utils/tokenManager";
 
 const api = axios.create({
-  baseURL: import.meta.env.VITE_API_BASE_URL || "http://localhost:5000",
+  baseURL: import.meta.env.VITE_API_BASE_URL || "https://eventhub-s8ck.onrender.com",
   withCredentials: false,
 });
 
